@@ -38,5 +38,34 @@ public class PiggyBank
         coinArrayList.add(coin);
     }
 
+    public void getHistory() {
+        for (Coin c: coinArrayList)
+        {
+            System.out.println(c.getAmount() + " " + c.getName());
+        }
+    }
 
+    public void getValue(){
+        System.out.println("The piggy bank holds $" + totalValue);
+    }
+
+    public void getContents(){
+        System.out.println(totalDollar + " Dollar");
+        System.out.println(totalQuarter + " Quarter");
+        System.out.println(totalDime + " Dime");
+        System.out.println(totalNickle + " Nickle");
+        System.out.println(totalPenny + " Penny");
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Your current saving: " + "\n" +
+                totalDollar + " Dollar" + "\n" +
+                totalQuarter + " Quarter" + "\n" +
+                totalDime + " Dime" + "\n" +
+                totalNickle + " Nickle" + "\n" +
+                totalPenny + " Penny" + "\n" +
+                "Total Value = " + totalValue + "\n";
+    }
 }
