@@ -21,5 +21,22 @@ public class PiggyBank
         totalValue = 0.0;
     }
 
+    public void add(Coin coin){
+        if (coin.getName() == "Penny") {
+            totalPenny += coin.getAmount();
+        } else if (coin.getName() == "Nickle") {
+            totalNickle += coin.getAmount();
+        } else if (coin.getName() == "Dime") {
+            totalDime += coin.getAmount();
+        } else if (coin.getName() == "Quarter") {
+            totalQuarter += coin.getAmount();
+        } else if (coin.getName() == "Dollar") {
+            totalDollar += coin.getAmount();
+        }
+
+        totalValue+=coin.totalDeposit();
+        coinArrayList.add(coin);
+    }
+
 
 }
